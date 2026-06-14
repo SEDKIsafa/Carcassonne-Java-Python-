@@ -1,0 +1,39 @@
+evaluation à chaque tour d'un jouoeur
+
+pose 
+    - route
+        continuité d'une route, se termine seulement à u croisement
+    - ville
+        doit se terminer dans une ville
+    - champ
+        coller à un champ 
+    - abbaye 
+        autour de champ
+    - meeple 
+        seulement si tuile que l'on vient de poser
+
+meeple : 
+    - ville -> templier
+        seulement si pas d'autres meeple sur la même ville
+    - champ -> paysan
+    - route -> brigand 
+        seulement si pas d'autres meeple sur la même route
+    - abbaye -> moine 
+
+condition de retrait meeple :
+    - templier -> si ville finit 
+    - champ -> fin de partie  
+    - route -> si fin de chemin est un croisement 
+    - moine -> si 8 tuiles autour de l'abbaye 9pts
+
+cas ou meeple de différentes personnes : 
+    personne qui a le plus de meeple qui obtient les points, si égalité, chacun obtient la totalité des points
+
+fin de partie :
+    evaluation des meeple restants :
+        - paysan : 3 points pour chaque ville finis dans le champ 
+        - brigands : 1pt pour chaque tuiles route 
+        - templier : 1pt par tuile ville et 1 pt par blason 
+        - moine : 1pt par tuiles adjacentes à l'abbaye + 1 pt
+
+vainqueur : celui qui a le plus de points 
